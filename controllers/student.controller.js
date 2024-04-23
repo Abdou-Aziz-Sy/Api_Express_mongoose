@@ -64,6 +64,10 @@ exports.deleteAll = (req, res) => {
       });
     });
 };
+exports.findByIdAndRemove = (id) => { 
+  return Student.findByIdAndRemove(id);
+};  
+
 // Retrieve all Students from the database.
 exports.findAll = (req, res) => {
   const name = req.query.name;
