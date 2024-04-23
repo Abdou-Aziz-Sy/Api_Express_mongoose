@@ -8,5 +8,8 @@ module.exports = app => {
   // Retrieve all Students
   router.get("/", students.findAll);
 
+  router.delete("/", students.deleteAll);
+  router.delete("/:id", students.delete);
+
   app.use("/api/students", router);
 };
